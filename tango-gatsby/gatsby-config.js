@@ -32,22 +32,26 @@ module.exports = {
       resolve: 'gatsby-source-wordpress',
       options: {
         excludedRoutes: ['/wp/v2/users/**', '/wp/v2/themes', '/wp/v3/settings*'],
-        baseURL: 'tango.startlearningreact.com'.
+        baseUrl: 'tango.startlearningreact.com',
         protocol: 'http',
         hostingWPCOM: false,
         useACF: true,
-        searchandReplaceContentUrls: {
+        searchAndReplaceContentUrls: {
           sourceUrl: 'http://tango.startlearningreact.com',
           replacementUrl: '',
         },
       },
     },
-    'gatsby-plugin-components',
+    'gatsby-plugin-styled-components',
     {
       resolve: 'gatsby-plugin-prefetch-google-fonts',
       options: {
-        fonts: 'Teko',
-        variants: ['200', '400', '500', '600', '700'],
+        fonts: [
+          {
+            family: 'Teko',
+            variants: ['200', '400', '500', '600', '700'],
+          },
+        ],
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
